@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <title>POC Controle Financeiro - Cadastro</title>
+    <title>POC Controle Financeiro - Login</title>
     <link rel="stylesheet" href="style.css">
 
     <?php
     /**
      * @var string $csrf_token
-     * @var array $transacoes
      */
     ?>
-
+    
 </head>
-
 <nav class="navbar">
         <a href="index.php?action=dashboard" class="navbar-brand">POC Financeiro</a>
         <ul class="navbar-menu">
@@ -30,15 +27,14 @@
 
 <body>
     <div class="container">
-        <h1>Cadastro de Novo Usuário</h1>
+        <h1>Acesso ao Sistema</h1>
 
-        <form method="POST" action="index.php?action=cadastro" class="form-auth">
+        <?php if (isset($erro)): ?>
+            <p class="mensagem-erro"><?= htmlspecialchars($erro) ?></p>
+        <?php endif; ?>
+
+        <form method="POST" action="index.php?action=login" class="form-auth">
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrf_token) ?>">
-
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required autocomplete="name">
-            </div>
 
             <div class="form-group">
                 <label for="email">E-mail:</label>
@@ -47,17 +43,16 @@
 
             <div class="form-group">
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required autocomplete="new-password">
+                <input type="password" id="senha" name="senha" required autocomplete="current-password">
             </div>
 
-            <button type="submit" class="btn-submit">Cadastrar Usuário</button>
+            <button type="submit" class="btn-submit">Entrar</button>
         </form>
 
         <p class="link-redirecionamento">
-            Já tem uma conta? <a href="index.php?action=login">Faça Login</a>
+            Não possui conta? <a href="index.php?action=cadastro">Cadastre-se aqui</a>
         </p>
     </div>
 </body>
-
 
 </html>

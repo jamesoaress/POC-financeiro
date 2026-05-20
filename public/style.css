@@ -1,0 +1,194 @@
+/* ==========================================================================
+   RESET E VARIÁVEIS DE COR
+   ========================================================================== */
+:root {
+    --azul-banco: #0a4275;
+    --azul-claro: #145da0;
+    --branco: #ffffff;
+    --fundo-cinza: #f4f7f6;
+    --texto-escuro: #333333;
+    --texto-mutado: #666666;
+    --borda: #dddddd;
+    --sombra: rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--fundo-cinza);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   BARRA DE NAVEGAÇÃO (NAVBAR)
+   ========================================================================== */
+.navbar {
+    background-color: var(--azul-banco);
+    padding: 0 2rem;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px var(--sombra);
+}
+
+.navbar-brand {
+    color: var(--branco);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    opacity: 0.8;
+}
+
+.btn-sair-nav {
+    color: #ff4d4d !important;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   CONTAINERS E CARDS PRINCIPAIS
+   ========================================================================== */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--sombra);
+}
+
+.dashboard-container {
+    max-width: 800px;
+}
+
+h1, h2 {
+    color: var(--azul-banco);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--fundo-cinza);
+    padding-bottom: 10px;
+}
+
+/* ==========================================================================
+   FORMULÁRIOS
+   ========================================================================== */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--texto-escuro);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--borda);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--azul-claro);
+    box-shadow: 0 0 0 2px rgba(20, 93, 160, 0.2);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--azul-banco);
+    color: var(--branco);
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: var(--azul-claro);
+}
+
+.link-redirecionamento {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.link-redirecionamento a {
+    color: var(--azul-banco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   DASHBOARD E EXTRATO
+   ========================================================================== */
+.cabecalho-sistema {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: var(--fundo-cinza);
+    padding: 15px;
+    border-radius: 4px;
+    border-left: 4px solid var(--azul-banco);
+}
+
+.info-usuario {
+    font-weight: bold;
+    color: var(--azul-banco);
+}
+
+.lista-transacoes {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.lista-transacoes li {
+    padding: 15px;
+    border-bottom: 1px solid var(--borda);
+    display: flex;
+    justify-content: space-between;
+}
+
+.lista-transacoes li:last-child {
+    border-bottom: none;
+}
+
+.mensagem-erro {
+    background-color: #ffe6e6;
+    color: #cc0000;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border-left: 4px solid #cc0000;
+}
