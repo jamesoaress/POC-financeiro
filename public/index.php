@@ -1,6 +1,6 @@
 <?php
 // Autoload simples (em um projeto real use o Composer)
-require_once '../src/sonfig/SecurityHeaders.php';
+require_once '../src/config/SecurityHeaders.php';
 require_once '../src/security/SessionManager.php';
 require_once '../src/security/CSRF.php';
 require_once '../src/sodels/Database.php';
