@@ -1,10 +1,10 @@
 <?php
 // Autoload simples (em um projeto real use o Composer)
-require_once '../src/Config/SecurityHeaders.php';
-require_once '../src/Security/SessionManager.php';
-require_once '../src/Security/CSRF.php';
-require_once '../src/Models/Database.php';
-require_once '../src/Models/Usuario.php';
+require_once '../src/sonfig/SecurityHeaders.php';
+require_once '../src/security/SessionManager.php';
+require_once '../src/security/CSRF.php';
+require_once '../src/sodels/Database.php';
+require_once '../src/models/Usuario.php';
 
 // 1. Inicia Sessão Segura e Aplica Headers
 SessionManager::startSecureSession();
